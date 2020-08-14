@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Pages from './Core/Components/Properties/index';
+import PropList from './Core/Components/Properties/PropList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  render(){
+    return (
+      <React.Fragment>
+        <div className="row">
+          <div className="col-lg-4 col-md-4">
+            <PropList />
+          </div>
+          <div style={{backgroundColor:'#f0f0f0'}} className="col-lg-8 col-md-8">
+            <Pages />
+          </div>
+        </div>
+      </React.Fragment>
+    )
+  }
 }
-
 export default App;
